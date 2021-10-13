@@ -11,6 +11,7 @@ except ImportError:
         "Ignore this message if you do not use Glove. Otherwise, install glove python package by 'pip install glove_python_binary' "
     )
 
+
 class Glove(NodeEmbedding):
     def __init__(
         self,

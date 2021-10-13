@@ -20,6 +20,7 @@ import numpy as np
 from lime import utils
 from scipy import sparse
 
+
 class RWSentenceGenerator:
     def __init__(self, A, num_walks, walk_length, restart_prob, chunk_size=100000):
         self.num_walks = num_walks

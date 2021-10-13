@@ -10,6 +10,7 @@ from lime import rsvd
 from lime import NodeEmbedding
 from lime import utils
 
+
 class LaplacianEigenMap(NodeEmbedding):
     def __init__(self):
         self.in_vec = None

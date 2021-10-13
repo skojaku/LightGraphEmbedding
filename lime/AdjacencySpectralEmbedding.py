@@ -1,7 +1,7 @@
 """This module contains code for the spectral embedding based on the adjacency matrix"""
 
 import rsvd
-from scipy import sparse 
+from scipy import sparse
 from lime.Base import NodeEmbedding
 from lime import utils
 

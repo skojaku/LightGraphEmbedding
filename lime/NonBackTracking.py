@@ -10,6 +10,7 @@ import numpy as np
 from lime.Base import NodeEmbedding
 from lime import utils
 
+
 class NonBacktrackingSpectralEmbedding(NodeEmbedding):
     def __init__(
         self, verbose=False,
