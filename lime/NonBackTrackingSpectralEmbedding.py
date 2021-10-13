@@ -1,10 +1,11 @@
-"""This module contains the code for the spectral embedding based on non-back
-tracking matrix.
+"""This module contains the code for the spectral embedding based on non-
+backtracking matrix.
 
 Florent Krzakala, Cristopher Moore, Elchanan Mossel, Joe Neeman, Allan
 Sly, Lenka Zdeborová, Pan Zhang Proceedings of the National Academy of
 Sciences Dec 2013, 110 (52) 20935-20940; DOI: 10.1073/pnas.1312486110.
 """
+
 import numpy as np
 from scipy import sparse
 
