@@ -1,8 +1,9 @@
-"""This module is a wrapper for glove_python_binary"""
+"""This module is a wrapper for glove_python_binary."""
 
 import numpy as np
-from Base import NodeEmbedding
+
 from lime import random_walk_sampler
+from lime.Base import NodeEmbedding
 
 try:
     import glove

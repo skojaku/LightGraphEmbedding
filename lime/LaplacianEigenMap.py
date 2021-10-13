@@ -1,14 +1,14 @@
 """This module contains code for Laplacian Eigenmaps.
 
-Mikhail Belkin, and Partha Niyogi. Laplacian Eigenmaps and Spectral Techniques for Embedding and Clustering. NIPS 2001.
-
+Mikhail Belkin, and Partha Niyogi. Laplacian Eigenmaps and Spectral
+Techniques for Embedding and Clustering. NIPS 2001.
 """
 
 import numpy as np
 from scipy import sparse
-from lime import rsvd
-from lime import NodeEmbedding
-from lime import utils
+
+from lime import rsvd, utils
+from lime.Base import NodeEmbedding
 
 
 class LaplacianEigenMap(NodeEmbedding):

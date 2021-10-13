@@ -1,17 +1,18 @@
-"""
-This module contains the code for the spectral embedding based on 
-non-back tracking matrix. 
+"""This module contains the code for the spectral embedding based on non-back
+tracking matrix.
 
-Florent Krzakala, Cristopher Moore, Elchanan Mossel, Joe Neeman, Allan Sly, Lenka Zdeborová, Pan Zhang
-Proceedings of the National Academy of Sciences Dec 2013, 110 (52) 20935-20940; DOI: 10.1073/pnas.1312486110.
+Florent Krzakala, Cristopher Moore, Elchanan Mossel, Joe Neeman, Allan
+Sly, Lenka Zdeborová, Pan Zhang Proceedings of the National Academy of
+Sciences Dec 2013, 110 (52) 20935-20940; DOI: 10.1073/pnas.1312486110.
 """
-from scipy import sparse
 import numpy as np
-from lime.Base import NodeEmbedding
+from scipy import sparse
+
 from lime import utils
+from lime.Base import NodeEmbedding
 
 
-class NonBacktrackingSpectralEmbedding(NodeEmbedding):
+class NonBackTracking(NodeEmbedding):
     def __init__(
         self, verbose=False,
     ):

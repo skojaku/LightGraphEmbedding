@@ -1,13 +1,13 @@
-"""This module contains the sentence generator based on random walks. 
+"""This module contains the sentence generator based on random walks.
 
-This process can be a bottleneck of many graph embeddings methods, and thus fast simulation of random walks are critical for large networks. 
+This process can be a bottleneck of many graph embeddings methods, and thus fast simulation of random walks are critical for large networks.
 
-To this end, we leverage the structure of scipy.csr_matrix. This csr_matrix stores the adjacency matrix in a way that makes it easy to simulate random walks. Specifically, let A is the adjacency matrix in form of scipy.csr_matrix. Then, A has the following perivate members: A.data, A.indptr, and A.indices. 
+To this end, we leverage the structure of scipy.csr_matrix. This csr_matrix stores the adjacency matrix in a way that makes it easy to simulate random walks. Specifically, let A is the adjacency matrix in form of scipy.csr_matrix. Then, A has the following perivate members: A.data, A.indptr, and A.indices.
 
 Now, consider simulating a random walk in node i in a network, and finding the next node j to move.
 The neighbors of node i can be obtained by
 ````python
-- A.indices[A.indptr[i]:A.indptr[i+1]] 
+- A.indices[A.indptr[i]:A.indptr[i+1]]
 ````
 connected by edges with weights
 ````python
@@ -17,8 +17,9 @@ Finding the next node to move is, therefore, sampling from `A.indices[A.indptr[i
 """
 import numba
 import numpy as np
-from lime import utils
 from scipy import sparse
+
+from lime import utils
 
 
 class RWSentenceGenerator:
@@ -98,8 +99,8 @@ def _simulate_simple_walk(
     restart_at_dangling,
     random_teleport,
 ):
-    """ Random walk simulator.
-        
+    """Random walk simulator.
+
     :param window_length: window length, defaults to 10
     :type window_length: int, optional
     :param A_indptr: A private member of scipy.sparse.csr_matrix
@@ -110,18 +111,18 @@ def _simulate_simple_walk(
     :type A_data: csr_matrix.data
     :param num_nodes: number of nodes in the network
     :type num_nodes: int
-    :param restart_prob: Probability of teleporting back to the starting node. 
+    :param restart_prob: Probability of teleporting back to the starting node.
     :type restart_prob: float
-    :param start_node_ids: array of starting nodes 
+    :param start_node_ids: array of starting nodes
     :type start_node_ids: numpy.ndarray
     :param random_teleport: Probability of teleporting to a node chosen randomly from the network.
     :type random_teleport: float
-    :return: walks: List of the trajectories of random walks  
+    :return: walks: List of the trajectories of random walks
     :rtype: walks: list of list
     """
     # Alocate a memory for recording a walk
     walks = -np.ones((len(start_node_ids), walk_length), dtype=np.int32)
-    for sample_id in prange(len(start_node_ids)):
+    for sample_id in range(len(start_node_ids)):
         start_node = start_node_ids[sample_id]
         # Record the starting node
         visit = start_node

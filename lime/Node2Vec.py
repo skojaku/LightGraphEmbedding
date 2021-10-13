@@ -1,15 +1,18 @@
-"""Module for node2vec. 
+"""Module for node2vec.
 
-Grover, Aditya, and Jure Leskovec. 2016. “Node2Vec: Scalable Feature Learning for Networks.” In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 855–64. KDD ’16. New York, NY, USA: ACM.
-
+Grover, Aditya, and Jure Leskovec. 2016. “Node2Vec: Scalable Feature
+Learning for Networks.” In Proceedings of the 22Nd ACM SIGKDD
+International Conference on Knowledge Discovery and Data Mining, 855–64.
+KDD ’16. New York, NY, USA: ACM.
 """
 
 import gensim
 import numpy as np
 import pandas as pd
 from scipy import sparse
-from Base import NodeEmbedding
-from random_walk_sampler import RWSentenceGenerator
+
+from lime.Base import NodeEmbedding
+from lime.random_walk_sampler import RWSentenceGenerator
 
 
 class Node2Vec(NodeEmbedding):
