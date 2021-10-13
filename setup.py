@@ -5,7 +5,7 @@ from os import path
 
 from setuptools import find_packages, setup
 
-__version__ = "0.0.11"
+__version__ = "0.0.0"
 
 
 def load_requires_from_file(fname):
@@ -19,11 +19,11 @@ with open(path.join(this_directory, "README.md")) as f:
     long_description = f.read()
 
 setup(
-    name="emlens",
+    name="lime",
     version=__version__,
     author="Sadamori Kojaku",
-    url="https://github.com/skojaku/emlens",
-    description="A lightweight toolbox for understanding embedding space",
+    url="https://github.com/skojaku/lime",
+    description="A lightweight python package for graph embeddings",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
