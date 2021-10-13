@@ -1,6 +1,7 @@
 """This module contains code for the spectral embedding based on the modularity
 matrix."""
 
+import numpy as np
 from scipy import sparse
 
 from lime import rsvd, utils

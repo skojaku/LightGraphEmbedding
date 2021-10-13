@@ -4,4 +4,4 @@ from lime.Glove import Glove
 from lime.LaplacianEigenMap import LaplacianEigenMap
 from lime.ModularitySpectralEmbedding import ModularitySpectralEmbedding
 from lime.Node2Vec import Node2Vec
-from lime.NonBackTracking import NonBackTracking
+from lime.NonBackTrackingSpectralEmbedding import NonBackTrackingSpectralEmbedding
